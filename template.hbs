@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Those three metas recommanded by http://gethead.info/ -->
+
+<title>Générateur de documentation Table Schema</title>
+<!-- Name of web application (only should be used if the website is used as an app) -->
+<meta name="application-name" content="CSV Documentor">
+<!-- In some situations this description (150 car.) is shown in the search results. -->
+<!-- meta name="description" content="A description of the page" -->
+<meta name="author" content="Charles Nepote, charles@nepote.org">
+<meta name="twitter:creator" content="@CharlesNepote">
+<!-- Simplified BSD License -->
+<link rel="license" href="https://opensource.org/licenses/BSD-2-Clause">
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.2.9/spectre.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<style>
+  /*.material-icons.md-18 { font-size: 18px; vertical-align: text-top; } /* */
+
+  body {
+    font-family: Verdana;
+    font-size:1 rem;
+    padding: 1em;
+  }
+  /* reminder: margin: top left bootom right */
+  h1, h2, h3, h4 { margin-top: 0.2rem; margin-bottom: 0rem; }
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  p { margin: 0 0 0.3rem; line-height: 1.5rem; }
+  ol, ul { margin-top: 0; margin-bottom: 1rem; }
+  ol li, ul li { margin-top: 0.1rem; }
+
+  #wrap {
+    margin: 0rem 1rem 0rem 1em;
+    padding: 1em;
+  }
+
+  body * { margin: 0.5em 0em 0.5em 0em }
+
+  .ts-description-title { margin-top: 1.5em; }
+
+  .tsf-name {
+    border-bottom: 1px solid blue;
+    margin: 2.5em 0em 1em 0em;
+  }
+
+  #ts-title { color: #af3c3c; }
+
+  .ts-fields {
+    padding-top: 1 em;
+  }
+
+  .regexp { color: #ff3434; }
+
+</style>
+
+</head>
+
+
+
+
+<body>
+
+<div id="wrap">
+
+
+{{#if title}}<h2 id="ts-title">{{title}}</h2>{{/if}}
+
+<p>
+  {{#if version}}<span class="ts-version">Version {{version}}</span>, {{/if}}
+  {{#if created}}<span class="ts-created">{{created}}</span>{{/if}}
+</p>
+{{#if author}}<p class="ts-author">{{author}}</p>{{/if}}
+{{#if publisher}}<p class="ts-publisher">{{publisher}}</p>{{/if}}
+{{#if contributor}}<p class="ts-contributor">Avec la contribution de {{contributor}}</p>{{/if}}
+{{#if homepage}}<p class="ts-hmpage">Page de cette spécification :
+  <a href="{{homepage}}">{{homepage}}</a></p>{{/if}}
+{{#if uri}}<p class="ts-uri">Schéma technique au format JSON :
+  <a href="{{uri}}">{{uri}}</a></p>{{/if}}
+{{#if previous}}<p class="ts-previous">Précédente version du schéma technique :
+  <a href="{{previous}}">{{previous}}</a></p>{{/if}}
+
+{{#if description}}
+<h3 class="ts-description-title">Description</h3>
+<p class="ts-description">{{description}}</p>
+{{/if}}
+
+<div class="ts-fields">
+  {{#each fields}}
+  <h4 class="tsf-name">Champ {{name}}</h4>
+  <p class="tsf-title"><strong>{{title}}</strong></p>
+  <p class="tsf-description">{{description}}</p>
+  <ul>
+    <li class="tsf-type">Type : {{type}}</li>
+    <li class="tsf-regexp">Regexp de validation : <code class="regexp">{{constraints.pattern}}</code></li>
+    <li class="tsf-examples">Exemple(s) : {{examples}}</li>
+  </ul>
+  {{/each}}
+</div>
+
+</div>
+
+</body>
+</html>
