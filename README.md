@@ -2,7 +2,7 @@
 
 [english/français]
 
-(fr) Crée un documentation HTML à partir d'un schéma de données au format [Table Schema](https://frictionlessdata.io/specs/table-schema/). csv-schema-documentor est un outil en ligne de commande fonctionnant sous Linux et probablement sous Mac OS X.
+(fr) Crée une documentation HTML à partir d'un schéma de données au format [Table Schema](https://frictionlessdata.io/specs/table-schema/). csv-schema-documentor est un outil en ligne de commande fonctionnant sous Linux et probablement sous Mac OS X.
 
 (en) Create HTML documentation from a CSV Schema ([Table Schema](https://frictionlessdata.io/specs/table-schema/)). csv-schema-documentor is command line tool working under Linux and probably Mac OS X.
 
