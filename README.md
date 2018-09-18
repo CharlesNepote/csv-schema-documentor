@@ -2,9 +2,9 @@
 
 [english/français]
 
-(fr) Crée une documentation HTML à partir d'un schéma de données au format [Table Schema](https://frictionlessdata.io/specs/table-schema/). csv-schema-documentor est un outil en ligne de commande fonctionnant sous Linux et probablement sous Mac OS X.
+(fr) Crée une documentation HTML à partir d'un schéma de données au format [Table Schema](https://frictionlessdata.io/specs/table-schema/). csv-schema-documentor est un outil en ligne de commande fonctionnant sous Linux et probablement sous Mac OS X. Voici [un exemple de documentation générée](http://rn7.net/csv-schema-documentor/doc.html), à partir de la [spécification](https://github.com/CharlesNepote/liste-prenoms-nouveaux-nes/blob/v1.1.1/prenom-schema.json) de la liste des prénoms des nouveaux nés.
 
-(en) Create HTML documentation from a CSV Schema ([Table Schema](https://frictionlessdata.io/specs/table-schema/)). csv-schema-documentor is command line tool working under Linux and probably Mac OS X.
+(en) Create HTML documentation from a CSV Schema ([Table Schema](https://frictionlessdata.io/specs/table-schema/)). csv-schema-documentor is command line tool working under Linux and probably Mac OS X.  Check [this example of generated doc](http://rn7.net/csv-schema-documentor/doc.html), from this [specification](https://github.com/CharlesNepote/liste-prenoms-nouveaux-nes/blob/v1.1.1/prenom-schema.json) (in french).
 
 ## Installation
 
@@ -35,8 +35,6 @@ Create a doc.html documentation from your schema.json.
 ## TODO
 
 - Explain properties outside of strict Table Schema spec.
-
-- Publish examples: JSON source file and HTML corresponding documentation.
 
 - French/english doc based on browser config.
 
