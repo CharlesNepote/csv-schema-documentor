@@ -9,17 +9,26 @@
 ## Installation
 
 (fr)
-- Installer [handlebars-cmd](https://www.npmjs.com/package/handlebars-cmd).
+- Installer [handlebars-cmd](https://www.npmjs.com/package/handlebars-cmd) ou bien [render-cli](https://www.npmjs.com/package/render-cli).
 
-- Télécharger le repos ou bien seulement le fichier template.hbs.
+- Télécharger le repos ou bien seulement le fichier `template.hbs`.
 
 ## Usage
 
-(fr) Crée une documentation doc.html à partir de votre fichier schema.json.
+(fr)
+
+Crée une documentation doc.html à partir de votre fichier schema.json.
 
 `handlebars schema.json < template.hbs > doc.html`
 
-(en) Create a doc.html documentation from your schema.json.
+Example à partir d'un fichier en ligne :
+
+`curl -O https://raw.githubusercontent.com/CharlesNepote/liste-prenoms-nouveaux-nes/v1.1.1/prenom-schema.json && handlebars prenom-schema.json < template.hbs > doc.html`
+
+
+(en)
+
+Create a doc.html documentation from your schema.json.
 
 `handlebars schema.json < template.hbs > doc.html`
 
@@ -31,6 +40,6 @@
 
 - French/english doc based on browser config.
 
-- Provide an example combining wget and handlebars.
-
 - Provide an example for multiple files.
+
+- Generation form.
